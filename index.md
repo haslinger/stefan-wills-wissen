@@ -1,5 +1,5 @@
 ---
-title: Episodes
+title: Episoden
 layout: default
 navigation: 0
 ---
