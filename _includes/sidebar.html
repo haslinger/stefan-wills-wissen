@@ -53,20 +53,28 @@
 </ol>
 
 
+<h4>JSON-Feeds</h4>
+
+<ol type="i">
+  {% for jsonfeed in site['json_feed_formats'] %}
+    <li><a href="{{ site['url']}}/feed.{{ jsonfeed }}.json"><i class="fa fa-rss-square"></i> {{ jsonfeed }}-JSON-Feed</a></li>
+  {% endfor %}
+</ol>
+
+
+<h4>Feedback</h4>
+
+<p>bitte per E-Mail an <a href="mailto:mail@stefan-haslinger.at">mail@stefan-haslinger.at</a>!</p>
+
+
 <h4>Directories</h4>
 
 <ol type="i">
   {% if site.itunes_url %}
     <li>in Apple-<a href="{{ site.itunes_url }}"><i class="fa fa-apple"></i> Itunes</a></li>
   {% endif %}
-  {% if site.bitlove_url %}
-    <li>as Torrents at <a href="{{ site.bitlove_url }}"><img src="https://bitlove.org/static/favicon.png"/> Bitlove</a></li>
-  {% endif %}
-  {% if site.fyyd_url %}
-    <li>at the podcast search engine <a href="{{ site.fyyd_url }}">Fyyd</a></li>
-  {% endif %}
-  {% if site.gpodder_url %}
-    <li>at <a href="{{ site.gpodder_url }}"><img src="https://gpodder.net/media/gpoddernet_64.png" height="16" /> Gpodder.net</a></li>
+  {% if site.panoptikum_url %}
+    <li>our page at <a href="{{ site.bitlove_url }}"><img src="https://panoptikum.io/favicon.ico"/> Panoptikum</a></li>
   {% endif %}
 </ol>
 
