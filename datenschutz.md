@@ -1,9 +1,11 @@
 ---
 title: Datenschutzerklärung
-layout: page
+layout: default
 permalink: datenschutz/
 navigation: 2
 ---
+
+# Datenschutzerklärung
 
 Der Schutz Ihrer persönlichen Daten ist mir wichtig. Ich verarbeite Ihre Daten daher ausschließlich
 auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In diesen Datenschutzinformationen
