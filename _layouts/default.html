@@ -14,12 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
 
-  <script type='text/javascript' src="{{ site.url }}/assets/js/jquery.min.js"></script>
-  <script type='text/javascript' src="{{ site.url }}/assets/js/bootstrap.min.js"></script>
-  <script type='text/javascript' src="{{ site.url }}/assets/js/icheck.min.js"></script>
-  <script type='text/javascript' src="{{ site.url }}/assets/js/jquery.fs.selecter.min.js"></script>
-  <script type='text/javascript' src="{{ site.url }}/assets/js/jquery.fs.stepper.min.js"></script>
-  <script type='text/javascript' src="{{ site.url }}/assets/js/custom.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/assets/js/dropdown.js"></script>
 
   {% if site.flattr_uid %}{% include flattr_loader.html %}{% endif %}
   {% if site.disqus_shortname %}
@@ -30,52 +25,56 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            {{ site | navigation_list:page }}
-          </ul>
-          <form class="navbar-form navbar-right" action="https://google.com/search" method="get" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="search item">
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ site.url }}">{{ site.title }}</a>
+
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <ul class="navbar-start">
+        {{ site | navigation_list:page }}
+      </ul>
+
+      <div class="navbar-end">
+        <form class="navbar-item" action="https://google.com/search" method="get" role="search">
+          <div class="field has-addons">
+            <div class="control">
+              <input type="text" class="input" placeholder="search item">
               <input type="hidden" name="q" value="site:{{ site.url | host_from_url }}" />
             </div>
-            <button type="submit" class="btn btn-default">Search</button>
-          </form>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="row ">
-        <div class="col-sm-8">
-          <div class="content">
-            {{ content }}
+            <div class="control">
+              <button type="submit" class="button">Search</button>
+            </div>
           </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 content">
+          {{ content }}
         </div>
-        <div id="sidebar" class="col-sm-4">
-          <div class="well">
+        <div class="column is-4">
+          <div class="box">
             {% include sidebar.html %}
           </div>
         </div>
       </div>
-      <div class="row" id="footer">
-        <small class="pull-right">
-          Powered by <a href="https://jekyll-octopod.github.io/">jekyll-octopod</a>
-          and <a href="http://jekyllrb.com/">Jekyll</a>.
-        </small>
+
+      <div class="has-text-right is-size-7">
+        Powered by <a href="https://jekyll-octopod.github.io/">jekyll-octopod</a>
+        and <a href="http://jekyllrb.com/">Jekyll</a>.
       </div>
-    </div><!-- /.container -->
-  </div><!-- /.container -->
+    </div>
+  </section>
+</body>
 </html>

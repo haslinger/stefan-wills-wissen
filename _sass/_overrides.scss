@@ -1,10 +1,6 @@
 // Improve visibility of subtitles and similar text by increasing contrast
-h1 small, h2 small, h3 small {
+h1 .subtitle, h2 .subtitle, h3 .subtitle {
   color: #77778C;
-}
-
-btn small, .btn small {
-  color: #2A2A2A;
 }
 
 // Making the date smaller improves the episode header when it includes the subtitle
@@ -12,57 +8,31 @@ btn small, .btn small {
   font-size: 45%;
 }
 
-// Theme for the Swiss-Sided Dice podcast, red and white based on the Swiss flag - commented out for now, until a better solution can be found
+// The navigation_list/talk_list filters from jekyll-octopod render plain <li><a> markup
+// (a leftover from the Bootstrap-based theme) instead of Bulma's <a class="navbar-item">.
+// Style it directly so it fits in visually alongside real .navbar-item siblings.
+.navbar-start {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-/*
-// Main navbar background
-.navbar-default {
-  background-color: #E11A27;
-}
+  li {
+    display: flex;
+    align-items: center;
+  }
 
-// Hovering over navbar links, keep the text white, but add darker background
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > li > a {
-  color: #FFF;
-  background-color: #E11A27;
-}
+  li a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    color: #4a4a4a;
+    line-height: 1.5;
 
-// The "brand" / podcast title doesn't change on hover, but does keep the text white
-.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
-  color: #FFF;
+    &.active, &:hover {
+      background-color: whitesmoke;
+      color: #3273dc;
+    }
+  }
 }
-
-// This is for the menu button on narrow screens
-.navbar-default .navbar-toggle {
-  background-color: #E11A27;
-  border-color: #FFF;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #FFF;
-}
-
-// Darker background, keep rest white
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-nav > li > a:hover {
-  background-color: #A5131D;
-  border-color: #FFF;
-  color: #FFF;
-}
-
-// Links and buttons in the website are a dark red for best contrast, but get lightened on hover for feedback
-a {
-  color: #CF000F;
-}
-a:hover {
-  color: #EF3743;
-}
-.btn-primary {
-  background-color: #CF000F;
-}
-.btn-primary:hover, .btn-primary:focus {
-  background-color: #EF3743;
-}
-*/

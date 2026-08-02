@@ -1,17 +1,17 @@
-<div class="page-header">
-  <h3>
+<div class="block">
+  <h3 class="title is-4">
     {{ site.title }}
-    {% if site.subtitle %}<br/><small>{{ site.subtitle }}</small>{% endif %}
+    {% if site.subtitle %}<br/><span class="subtitle is-6">{{ site.subtitle }}</span>{% endif %}
   </h3>
 </div>
 
-<p class="text-center">
+<p class="has-text-centered">
   <img width="200px" src="{{ site.url }}/img/logo-360x360.png" alt="{{ site.title }} logo">
 </p>
 
 {% if site.description %}<p>{{ site.description }}</p>{% endif %}
 
-<p class="text-center">
+<p class="has-text-centered">
   <script class="podlove-subscribe-button"
           src="/subscribe-button/javascripts/app.js"
           data-language="{{ site.language }}"
@@ -48,7 +48,7 @@
 
 <ol type="i">
   {% for feed in site['episode_feed_formats'] %}
-    <li><a href="{{ site['url']}}/episodes.{{ feed }}.rss"><i class="fa fa-rss"></i> {{ feed }}-Feed</a></li>
+    <li><a href="{{ site['url']}}/episodes.{{ feed }}.rss"><span class="icon"><i class="las la-rss"></i></span> {{ feed }}-Feed</a></li>
   {% endfor %}
 </ol>
 
@@ -57,7 +57,7 @@
 
 <ol type="i">
   {% for jsonfeed in site['json_feed_formats'] %}
-    <li><a href="{{ site['url']}}/feed.{{ jsonfeed }}.json"><i class="fa fa-rss-square"></i> {{ jsonfeed }}-JSON-Feed</a></li>
+    <li><a href="{{ site['url']}}/feed.{{ jsonfeed }}.json"><span class="icon"><i class="las la-rss-square"></i></span> {{ jsonfeed }}-JSON-Feed</a></li>
   {% endfor %}
 </ol>
 
@@ -71,7 +71,7 @@
 
 <ol type="i">
   {% if site.itunes_url %}
-    <li>in Apple-<a href="{{ site.itunes_url }}"><i class="fab fa-apple"></i> Itunes</a></li>
+    <li>in Apple-<a href="{{ site.itunes_url }}"><span class="icon"><i class="lab la-apple"></i></span> Itunes</a></li>
   {% endif %}
   {% if site.panoptikum_url %}
     <li>our page at <a href="{{ site.bitlove_url }}"><img src="https://panoptikum.social/favicon.ico"/> Panoptikum</a></li>
@@ -100,13 +100,13 @@
 <hr/>
 
 {% if site.flattr_uid %}
-  <span class="pull-left">{{ site | flattr_button }}</span>
+  <span>{{ site | flattr_button }}</span>
 {% endif %}
 
 {% if site.twitter_nick %}
   <a href="https://twitter.com/{{ site.twitter_nick }}"
-     class="button btn-primary btn-sm"
+     class="button is-link is-small"
      data-show-count="false">
-    <i class="fa fa-twitter"></i>Follow @{{ site.twitter_nick }}
+    <span class="icon"><i class="lab la-twitter"></i></span><span>Follow @{{ site.twitter_nick }}</span>
   </a>
 {% endif %}
