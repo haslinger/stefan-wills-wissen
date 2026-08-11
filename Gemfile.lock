@@ -126,10 +126,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll
-  jekyll-bulma
+  jekyll (~> 4.4)
+  jekyll-bulma (~> 1.0.3)
   jekyll-feed (~> 0.6)
-  jekyll-octopod
+  jekyll-octopod (~> 0.16.1)
   jekyll-sass-converter (~> 3.0)
 
 BUNDLED WITH
