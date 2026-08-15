@@ -1,0 +1,36 @@
+
+title: "Stefan will's wissen!"
+url: https://podcast.stefan-haslinger.at
+subtitle: Ich finde immer wieder Themen, von denen ich keine Ahnung habe. Ab jetzt frage ich nach.
+description: Ein Interview- und Gesprächspodcast mit interessanten Leuten, die etwas wissen.
+author: Stefan Haslinger
+email: mail@stefan-haslinger.at
+keywords: [stefan, Fragen, Wissen, Interview]
+itunes_categories: ["Technology", "Society & Culture"]
+
+itunes_url: http://itunes.apple.com/de/podcast/stefan-wills-wissen/id1276535832
+panoptikum_url: https://panoptikum.social/podcasts/21014
+
+episodes_per_feed_page: 100
+# Date can be localized via date_de.rb plugin
+date_format: "ordinal"
+## Rsync Deploy config #########################################################
+### Be sure your public key is listed in your server's ~/.ssh/authorized_keys
+### file.
+ssh_host: stefan@mittenin.at
+ssh_port: 22
+document_root: /var/www/stefan-wills-wissen/
+rsync_delete: true
+
+### Fediverse config, optional
+fediverse_url: https://panoptikum.social/informatom # Fediverse links will not be shown unless this is set
+language: de
+explicit: 'no'  # 'yes'/'no'/clean
+license: CC BY 4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_image_url: https://i.creativecommons.org/l/by/4.0/88x31.png
+## Isso comments #########################################################
+use_isso: no # set to 'yes' to include isso comments form
+
+plugins: [jekyll-octopod]
+theme: jekyll-octopod-bulma
