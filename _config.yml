@@ -17,9 +17,9 @@ date_format: "ordinal"
 ## Rsync Deploy config #########################################################
 ### Be sure your public key is listed in your server's ~/.ssh/authorized_keys
 ### file.
-ssh_host: stefan@mittenin.at
+ssh_host: stefan@alpha
 ssh_port: 22
-document_root: /var/www/stefan-wills-wissen/
+document_root: /var/www/podcast.stefan-haslinger.at/html
 rsync_delete: true
 
 ### Fediverse config, optional
